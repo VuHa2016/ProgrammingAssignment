@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!--Add Icon and title -->
+    <link rel="icon" type="image/gif" href="img/icon.png" />
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <link href="css/layout.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Declare the View -->   
+    <div id="header">
+        <span id="tittle_message">E-CENTRIC INNOVATIONS PROGRAMMING ASSIGNMENT</span>
+    </div>
+    <div style="display:inline-block;width:100%;margin-top:10%" >
+        <div style="display: inline-block; width: 30%;float:left" >&nbsp;</div>
+        <div style="display: inline-block; width: 40%;border:1px solid">
+            <h1 style="text-align: center; margin: 0px; background-color: #0094ff">Calculator</h1>
+            <hr style="margin:0px"/>
+            <div ng-app="calculator" ng-controller="calculatorController" style="margin-left:5px;">
+                <div class="section group">
+                    <!-- Display the result row -->
+                    <div class="col c4of5">{{ displayValue }}</div>                 
+                </div>
+                <div class="section group">
+                    <div ng-click="operationButtonClicked('i')" class="col c1of5">sin</div>
+                    <div ng-click="operationButtonClicked('o')" class="col c1of5">cos</div>
+                    <div ng-click="operationButtonClicked('a')" class="col c1of5">tan</div>
+                    <div ng-click="operationButtonClicked('z')" class="col c1of5">log2</div>
+                    <div ng-click="operationButtonClicked('g')" class="col c1of5">log10</div>
+                </div>
+                <div class="section group">
+                    <div ng-click="operationButtonClicked('N')" class="col c1of5">asin</div>
+                    <div ng-click="operationButtonClicked('C')" class="col c1of5">acos</div>
+                    <div ng-click="operationButtonClicked('T')" class="col c1of5">atan</div>
+                    <div ng-click="operationButtonClicked('e')" class="col c1of5">ln</div>
+                    <div ng-click="operationButtonClicked('!')" class="col c1of5">n!</div>
+                </div>
+                <div class="section group">
+                    <div ng-click="numberButtonClicked(7)" class="col c1of5">7</div>
+                    <div ng-click="numberButtonClicked(8)" class="col c1of5">8</div>
+                    <div ng-click="numberButtonClicked(9)" class="col c1of5">9</div>
+                    <div ng-click="operationButtonClicked('+')" class="col c1of5">+</div>
+                    <div ng-click="operationButtonClicked('s')" class="col c1of5">square root</div>                  
+                </div>
+                <div class="section group">
+                    <div ng-click="numberButtonClicked(4)" class="col c1of5">4</div>
+                    <div ng-click="numberButtonClicked(5)" class="col c1of5">5</div>
+                    <div ng-click="numberButtonClicked(6)" class="col c1of5">6</div>
+                    <div ng-click="operationButtonClicked('-')" class="col c1of5">-</div>
+                    <div ng-click="operationButtonClicked('^')" class="col c1of5">^</div>
+                </div>
+                <div class="section group">
+                    <div ng-click="numberButtonClicked(1)" class="col c1of5">1</div>
+                    <div ng-click="numberButtonClicked(2)" class="col c1of5">2</div>
+                    <div ng-click="numberButtonClicked(3)" class="col c1of5">3</div>
+                    <div ng-click="operationButtonClicked('*')" class="col c1of5">*</div>
+                    <div ng-click="onClickClear()" class="col1 c1of5" >C</div>
+                </div>
+                <div class="section group">
+                    <div ng-click="numberButtonClicked(0)" class="col c1of5">0</div>
+                    <div ng-click="numberButtonClicked('.')" class="col c1of5">.</div>
+                    <div ng-click="operationButtonClicked('%')" class="col c1of5">mod</div>
+                    <div ng-click="operationButtonClicked('/')" class="col c1of5">/</div>
+
+                   
+                    <div ng-click="enterClicked()" class="col c1of5"><span style="color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; ">Display </span></div>
+                </div>
+            </div>
+        </div>
+        <div style="display: inline-block; width: 30%"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <span id="footer_message">Made by Vu Thanh Ha</span>
+    </div>            
+    <!-- App -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="app/calculator.js"></script>  
+</body>
+</html>
